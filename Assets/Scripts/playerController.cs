@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerController : MonoBehaviour
 {
     public float horizontalInput;
+    public GameObject projectilePrefab;
     public float speed = 10.0f;
     public float xRange = 10;
     // Start is called before the first frame update
