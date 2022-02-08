@@ -5,7 +5,6 @@ using UnityEngine;
 public class playerController : MonoBehaviour
 {
     public float horizontalInput;
-    public GameObject projectilePrefab;
     public float speed = 10.0f;
     public float xRange = 10;
     // Start is called before the first frame update
@@ -27,10 +26,5 @@ public class playerController : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //launch projectile from player
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-        }
     }
 }
